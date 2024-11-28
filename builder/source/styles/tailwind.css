@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#markdown {
+
+    /* TITLES */
+
+    h1 {
+        @apply text-5xl font-semibold
+    }
+
+    > h1 {
+        @apply mb-8 mt-12
+    }
+
+    h2 {
+        @apply text-4xl font-semibold
+    }
+
+    > h2 {
+        @apply mb-8 mt-12
+    }
+
+    h3 {
+        @apply text-3xl font-bold
+    }
+
+    > h3 {
+        @apply mb-8 mt-12
+    }
+
+    h4 {
+        @apply text-3xl font-semibold
+    }
+
+    > h4 {
+        @apply mb-8 mt-12
+    }
+
+    h5 {
+        @apply text-2xl font-bold
+    }
+
+    > h5 {
+        @apply mb-8 mt-12
+    }
+
+    h6 {
+        @apply text-2xl font-semibold
+    }
+
+    > h6 {
+        @apply mb-8 mt-12
+    }
+
+    /* TEXTS */
+
+    a {
+        @apply text-blue-600 underline-offset-2 decoration-2 hover:text-blue-400 hover:underline
+    }
+
+    > p {
+        @apply my-4
+    }
+
+    /* LISTS */
+
+    ul {
+        @apply list-disc list-inside my-4 pl-4
+    }
+
+    ol {
+        @apply list-decimal list-inside my-4 pl-4
+    }
+
+    ul li p,
+    ol li p {
+        @apply inline
+    }
+
+    ul li,
+    ol li {
+
+        ul,
+        ol {
+            @apply pl-8
+        }
+    }
+
+    /* CODE */
+
+    blockquote {
+        @apply border-l-4 border-zinc-300 pl-4 py-2 my-4
+    }
+
+    pre {
+        @apply bg-zinc-300 text-zinc-900 rounded-md px-4 py-2 my-4 overflow-x-auto
+    }
+
+    code:not(pre code) {
+        @apply bg-zinc-300 text-zinc-900 rounded px-1.5 py-0.5
+    }
+
+    /* MISC */
+
+    img {
+        @apply m-auto
+    }
+}

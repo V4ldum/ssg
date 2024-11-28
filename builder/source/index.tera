@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <link href="/styles/tailwind.css" rel="stylesheet"/>
+        <title>SSG Testing Grounds</title>
+    </head>
+
+    <body>
+        <main class="flex flex-col max-w-3xl mx-auto px-6">
+            <h1 class="text-5xl font-bold m-8 text-center">Markdown test files property of
+                <a class="text-blue-600 underline-offset-2 decoration-2 hover:text-blue-400 hover:underline"
+                   href="https://daringfireball.net/projects/markdown/basics">Daring Fireball
+                </a>
+            </h1>
+            <a class="text-blue-600 underline-offset-2 text-center decoration-2 hover:text-blue-400 hover:underline"
+               href="/public/licence.txt">Licence
+            </a>
+
+            {% set_global current_year = "" %}
+
+            {# For each pages #}
+            {% for page in pages | filter(attribute="data.tag", value="post") | sort(attribute="data.publish_date") |
+            reverse %}
+            {% set page_year = page.data.publish_date | date(format="%Y") %}
+
+            {# Check if the year has changed #}
+            {% if page_year != current_year %}
+            <p class="text-lg font-bold mt-6 mb-2">{{ page_year }}</p>
+            {% set_global current_year = page_year %}
+            {% endif %}
+
+            <div class="flex flex-row items-center my-2">
+                <p class="text-base basis-24 grow-0 shrink-0">
+                    {{ page.data.publish_date | date(format="%d %b")}}
+                </p>
+                <a class="text-blue-600 text-lg font-semibold underline-offset-2 decoration-2 hover:text-blue-400 hover:underline"
+                   href="{{ page.url }}">
+                    {{ page.data.title }}
+                </a>
+            </div>
+            {% else %}
+            <p class="text-lg fond-semibold text-center m-16">There are no posts yet.</p>
+            {% endfor %}
+
+        </main>
+    </body>
+
+</html>

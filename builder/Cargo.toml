@@ -1,0 +1,21 @@
+[package]
+name = "ssg"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+markdown = "1.0.0-alpha.21"
+walkdir = "2.5.0"
+gray_matter = "0.2.8"
+hyper = { version = "1.5", features = ["full"] }
+tokio = { version = "1.41", features = ["full"] }
+http-body-util = "0.1.2"
+hyper-util = { version = "0.1.10", features = ["full"] }
+serde = { version = "1.0.214", features = ["derive"] }
+tera = "1.20.0"
+colored = "2.1.0"
+anyhow = "1.0.93"
+
+[features]
+markdown = []
+templates = []

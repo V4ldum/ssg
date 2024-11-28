@@ -1,0 +1,3 @@
+template = "posts.tera"
+tag = "post"
+base_path = "/"
