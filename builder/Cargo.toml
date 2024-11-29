@@ -18,4 +18,6 @@ anyhow = "1.0.93"
 
 [features]
 markdown = []
-templates = []
+template = []
+pretty_url = []
+tailwind = []
