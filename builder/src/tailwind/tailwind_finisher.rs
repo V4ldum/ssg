@@ -10,7 +10,7 @@ impl Finisher for TailwindFinisher {
         // todo dynamic
         let input = "source/styles/tailwind.css";
         let output = "build/styles/tailwind.css";
-        let tailwind_path = "./tailwindcss.exe";
+        let tailwind_path = "./tailwindcss";
         let config_file = "tailwind.config.js";
 
         progress!("Generating Tailwind CSS");
