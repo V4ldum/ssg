@@ -389,7 +389,7 @@ impl SSGPipelineRunner {
 
     pub fn run(mut self) {
         // todo custom parameters
-        let source_dir = Path::new("source");
+        let source_dir = Path::new("sources");
         let build_dir = Path::new("build");
         let includes_dir = Path::new("includes"); // todo care for template dir when this becomes user-controlled
 

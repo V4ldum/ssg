@@ -2,7 +2,7 @@
 module.exports = {
     content: {
         relative: true,
-        files: ["./{source,includes}/**/*.{tera,html}"],
+        files: ["./{sources,includes}/**/*.{tera,html}"],
     },
     theme: {
         extend: {},

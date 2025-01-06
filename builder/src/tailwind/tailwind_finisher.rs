@@ -8,7 +8,7 @@ pub struct TailwindFinisher {}
 impl Finisher for TailwindFinisher {
     fn finish(&self) {
         // todo dynamic
-        let input = "source/styles/tailwind.css";
+        let input = "sources/styles/tailwind.css";
         let output = "build/styles/tailwind.css";
         let tailwind_path = "./tailwindcss";
         let config_file = "tailwind.config.js";
