@@ -1,2 +1,15 @@
 /target
+
+# Miscellaneous
+*.log
+*.swp
+.DS_Store
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# SSG build target
 /build
